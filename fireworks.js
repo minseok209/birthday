@@ -60,17 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function drawText() {
-      ctx.fillStyle = 'white';
-      ctx.font = '20px Arial';
-      ctx.fillText("가은이의 생일을 축하합니다.", canvas.width / 2 - 150, textPosition);
-      ctx.fillText("가은이 생각하면서 이거 한줄한줄 코딩했어.", canvas.width / 2 - 200, textPosition + 30);
-      ctx.fillText("컴공 남친이 해줄수있는 소소한 이벤트랄까..", canvas.width / 2 - 200, textPosition + 60);
-      textPosition -= 0.5;
+    ctx.fillStyle = 'white';
+    ctx.font = '50px Arial';
+    ctx.textAlign = 'center'; // 텍스트 가운데 정렬 설정
+    // x 좌표를 canvas.width / 2로 설정하여 중앙에 위치하도록 조정
+    ctx.fillText("가은이의 생일을 축하합니다.", canvas.width / 2, textPosition);
+    ctx.fillText("가은이 생각하면서 이거 한줄한줄 코딩했어.", canvas.width / 2, textPosition + 60);
+    ctx.fillText("컴공 남친이 해줄수있는 소소한 이벤트랄까..", canvas.width / 2, textPosition + 120);
+    ctx.fillText("♡♡♡♡♡♡♡♡♡♡", canvas.width / 2, textPosition + 180);
+  
+    textPosition -= 0.5;
 
-      if (textPosition < -100) {
-          textPosition = canvas.height;
-      }
-  }
+    if (textPosition < -150) { // 텍스트 전체가 화면을 벗어났을 때 위치 재설정
+        textPosition = canvas.height;
+    }
+}
+
 
   function animate() {
       requestAnimationFrame(animate);
