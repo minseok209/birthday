@@ -60,21 +60,28 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function drawText() {
+    // 화면 너비에 따라 글자 크기 동적 조정
+    const fontSize = window.innerWidth < 768 ? '30px' : '50px'; // 모바일 화면일 때 30px, 그 외에는 50px
     ctx.fillStyle = 'white';
-    ctx.font = '50px Arial';
-    ctx.textAlign = 'center'; // 텍스트 가운데 정렬 설정
-    // x 좌표를 canvas.width / 2로 설정하여 중앙에 위치하도록 조정
+    ctx.font = `${fontSize} Arial`;
+    ctx.textAlign = 'center';
+    
+    // 글자 위치 조정을 위해 fontSize의 숫자값만 추출
+    const fontSizeNumber = parseInt(fontSize, 10);
+    
+    // y 위치를 fontSize에 따라 동적으로 조정
     ctx.fillText("가은이의 생일을 축하합니다.", canvas.width / 2, textPosition);
-    ctx.fillText("가은이 생각하면서 이거 한줄한줄 코딩했어.", canvas.width / 2, textPosition + 60);
-    ctx.fillText("컴공 남친이 해줄수있는 소소한 이벤트랄까..", canvas.width / 2, textPosition + 120);
-    ctx.fillText("♡♡♡♡♡♡♡♡♡♡", canvas.width / 2, textPosition + 180);
-  
+    ctx.fillText("가은이 생각하면서 이거 한줄한줄 코딩했어.", canvas.width / 2, textPosition + fontSizeNumber + 10); // 여백을 10px로 설정
+    ctx.fillText("컴공 남친이 해줄수있는 소소한 이벤트랄까..", canvas.width / 2, textPosition + 2 * (fontSizeNumber + 10)); // 두 번째 줄 여백
+    ctx.fillText("♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡", canvas.width / 2, textPosition + 3 * (fontSizeNumber + 10)); // 세 번째 줄 여백
+
     textPosition -= 0.5;
 
-    if (textPosition < -150) { // 텍스트 전체가 화면을 벗어났을 때 위치 재설정
+    if (textPosition < -150) {
         textPosition = canvas.height;
     }
 }
+
 
 
   function animate() {
