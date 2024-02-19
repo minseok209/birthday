@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>방명록</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="guestbook">
+        <h2>방명록</h2>
+        <form id="guestbook-form">
+            <input type="text" id="name" placeholder="이름을 입력하세요">
+            <textarea id="message" placeholder="메시지를 입력하세요"></textarea>
+            <button type="submit">작성하기</button>
+        </form>
+        <div id="messages"></div>
+    </div>
+  </div>
+
+    <script>
+        document.getElementById('guestbook-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+            const messagesDiv = document.getElementById('messages');
+            const entry = document.createElement('p');
+            entry.textContent = `${name}: ${message}`;
+            messagesDiv.appendChild(entry);
+            document.getElementById('name').value = '';
+            document.getElementById('message').value = '';
+        });
+    </script>
+</body>
+</html>

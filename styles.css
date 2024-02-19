@@ -1,0 +1,54 @@
+body, html {
+  height: auto; /* index.html의 높이를 자동으로 설정 */
+  margin: 0;
+  padding: 0;
+  display: block; /* flex 대신 block 레이아웃 사용 */
+  background-color: #f0f0f0;
+  font-family: 'Arial', sans-serif;
+}
+
+header {
+  background-color: #ffcccc;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+/* 가운데 정렬을 위한 스타일은 .container 클래스에 한정 */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* 내용이 페이지 높이를 넘어갈 경우를 위해 변경 */
+  width: 80%; /* 콘텐츠 너비 */
+  max-width: 600px; /* 콘텐츠 최대 너비 */
+  margin: 20px auto; /* 상하 마진 추가 및 자동으로 좌우 마진 설정 */
+  box-sizing: border-box; /* 패딩이 너비에 포함되도록 설정 */
+}
+
+.letter, .photo-gallery, .guestbook, .timer {
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
