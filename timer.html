@@ -27,7 +27,7 @@
               let minutes = Math.floor((timeLeftToMidnight % (1000 * 60 * 60)) / (1000 * 60));
               let seconds = Math.floor((timeLeftToMidnight % (1000 * 60)) / 1000);
               
-              document.getElementById('timer').innerHTML = `생일이 끝나기까지 ${hours}시간 ${minutes}분 ${seconds}초!`;
+              document.getElementById('timer').innerHTML = `생일이 끝나기까지 ${hours}시간 ${minutes}분 ${seconds}초 ㅜㅜ`;
           } else {
               // 다음 생일까지 남은 시간 계산
               let diff = nextBirthday - now;
@@ -36,7 +36,7 @@
               let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
               let seconds = Math.floor((diff % (1000 * 60)) / 1000);
               
-              document.getElementById('timer').innerHTML = `생일까지 ${days}일 ${hours}시간 ${minutes}분 ${seconds}초 남았어!`;
+              document.getElementById('timer').innerHTML = `생일까지 ${days}일 ${hours}시간 ${minutes}분 ${seconds}초 남은구야!`;
           }
       }
 
