@@ -1,42 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>코딩 히스토리</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="history.css">
 </head>
 <body>
-  <div class="container">
-    <h1>가은이 생일 축하 웹페이지 코딩 히스토리</h1>
-    <ul class="timeline">
+    <div class="container">
+        <h1>가은이 생일 축하 웹페이지 코딩 히스토리</h1>
+        <ul class="timeline">
         <li>
             <time>2024-02-07</time>
-            <p>프로젝트 아이디어 구상</p>
+            <p class="caption" data-target="projectIdea">프로젝트 아이디어 구상</p>
+            <img src="path/to/image.jpg" alt="아이디어 구상" class="hidden" id="projectIdea">
         </li>
         <li>
             <time>2024-02-09</time>
-            <p>설 연휴 프로토타입 개발 시작.</p>
+            <p class="caption" data-target="letterFrame">편지프레임 구현 완료</p>
+            <img src="path/to/image.jpg" alt="편지프레임 구현" class="hidden" id="letterFrame">
         </li>
         <li>
             <time>2024-02-11</time>
-            <p> 사진프레임 및 편지페이지 구현 완료.</p>
+            <p class="caption" data-target="photoFrame"> 사진프레임 구현 완료.</p>
+            <img src="https://github.com/minseok209/birthday/blob/main/photoreal.png?raw=true" alt="사진프레임 구현" class="hidden" id="photoFrame">
         </li>
         <li>
             <time>2024-02-15</time>
-            <p> 방명록 / 타이머 기능 구현</p>
+            <p class="caption" data-target="timerFunction"> 타이머 기능 구현</p>
+            <img src="https://github.com/minseok209/birthday/blob/main/timer.png?raw=true" alt="타이머 기능 구현" class="hidden" id="timerFunction">
         </li>
         <li>
             <time>2024-02-16</time>
-            <p> 폭죽 애니매이션 기능 구현</p>
+            <p class="caption" data-target="fireworkFunction">  폭죽 애니매이션 기능 구현</p>
+            <img src="https://github.com/minseok209/birthday/blob/main/firework.png?raw=true" alt="폭죽애니메이션 구현" class="hidden" id="fireworkFunction">
         </li>
         <li>
             <time>2024-02-18</time>
-            <p>전체 수정 및 방명록 기능 폐지</p>
+            <p class="caption" data-target="heartFunction"> 전체 수정 및 하트폭죽 추가</p>
+            <img src="https://github.com/minseok209/birthday/blob/main/heartwork.png?raw=true" alt="하트폭죽 구현" class="hidden" id="heartFunction">
         </li>
         <li>
             <time>2024-02-19</time>
-            <p>프로젝트 공개 및 첫 배포</p>
+            <p>1차 완성본</p>
         </li>
         <li>
             <time>2024-02-20</time>
@@ -63,5 +69,6 @@
         })();
       </script>
 -->
+    <script src="script.js"></script>
 </body>
 </html>
