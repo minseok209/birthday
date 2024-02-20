@@ -1,3 +1,4 @@
+
 function updateTimer() {
   const now = new Date();
   const nextBirthday = new Date(now.getFullYear(), 1, 22); // 2월 22일
