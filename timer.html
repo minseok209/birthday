@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>생일 카운트다운</title>
+    <title>가은이 생일까지 남은시간 </title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,24 +11,36 @@
     <div id="timer" class="timer"></div></div>
 
     <script>
-        function updateTimer() {
-            const now = new Date();
-            const nextBirthday = new Date(now.getFullYear(), 1, 22); // 2월 22일
-            if (now > nextBirthday) {
-                nextBirthday.setFullYear(now.getFullYear() + 1);
-            }
-            const diff = nextBirthday - now;
-            
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+      function updateTimer() {
+          const now = new Date();
+          let currentYear = now.getFullYear();
+          let birthday = new Date(currentYear, 1, 22); // 2월 22일
+          let tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1);
+          let nextBirthdayYear = now > birthday ? currentYear + 1 : currentYear;
+          let nextBirthday = new Date(nextBirthdayYear, 1, 22);
+          
+          // 생일이 오늘이라면
+          if (now.getMonth() === 1 && now.getDate() === 22) {
+              // 자정까지 남은 시간 계산
+              let timeLeftToMidnight = tomorrow - now;
+              let hours = Math.floor(timeLeftToMidnight / (1000 * 60 * 60));
+              let minutes = Math.floor((timeLeftToMidnight % (1000 * 60 * 60)) / (1000 * 60));
+              let seconds = Math.floor((timeLeftToMidnight % (1000 * 60)) / 1000);
+              
+              document.getElementById('timer').innerHTML = `생일이 끝나기까지 ${hours}시간 ${minutes}분 ${seconds}초!`;
+          } else {
+              // 다음 생일까지 남은 시간 계산
+              let diff = nextBirthday - now;
+              let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+              let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+              let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+              let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+              
+              document.getElementById('timer').innerHTML = `생일까지 ${days}일 ${hours}시간 ${minutes}분 ${seconds}초 남았어!`;
+          }
+      }
 
-            document.getElementById('timer').innerHTML = days + "일 " + hours + "시간 "
-            + minutes + "분 " + seconds + "초 남았습니다!";
-        }
-
-        setInterval(updateTimer, 1000);
-    </script>
+      setInterval(updateTimer, 1000);
+  </script>
 </body>
 </html>
