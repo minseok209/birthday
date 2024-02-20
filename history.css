@@ -1,0 +1,28 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.timeline {
+  list-style-type: none;
+}
+
+.timeline li {
+  margin-bottom: 20px;
+}
+
+.caption {
+  cursor: pointer;
+  color: #007bff;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
