@@ -71,9 +71,10 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // y 위치를 fontSize에 따라 동적으로 조정
     ctx.fillText("가은이의 생일을 축하합니다.", canvas.width / 2, textPosition);
-    ctx.fillText("가은이 생각하면서 이거 한줄한줄 코딩했어.", canvas.width / 2, textPosition + fontSizeNumber + 10); // 여백을 10px로 설정
-    ctx.fillText("컴공 남친이 해줄수있는 소소한 이벤트랄까..", canvas.width / 2, textPosition + 2 * (fontSizeNumber + 10)); // 두 번째 줄 여백
-    ctx.fillText("♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡", canvas.width / 2, textPosition + 3 * (fontSizeNumber + 10)); // 세 번째 줄 여백
+    ctx.fillText("가은이 생각하면서 한줄한줄 코딩했어", canvas.width / 2, textPosition + fontSizeNumber + 10); // 여백을 10px로 설정
+    ctx.fillText("소소한(만드는데 소소하진 않았던..) 이벤트랄까", canvas.width / 2, textPosition + 2 * (fontSizeNumber + 10)); // 두 번째 줄 여백
+    ctx.fillText("- 가은이를 짱 사랑하는 민석이가 -", canvas.width / 2, textPosition + 3 * (fontSizeNumber + 10)); // 세 번째 줄 여백
+    ctx.fillText("♡♡♡♡♡♡♡♡♡♡♡♡♡♡♡", canvas.width / 2, textPosition + 4 * (fontSizeNumber + 10)); // 네 번째 줄 여백
 
     textPosition -= 0.5;
 
