@@ -71,3 +71,36 @@ main {
       height: auto;
   }
 }
+.photos-container {
+  text-align: center;
+  background-image: url('https://img.freepik.com/free-vector/hand-drawn-hearts-border-and-frame_23-2149246536.jpg?size=626&ext=jpg'); /* 배경 이미지 설정 */
+  background-size: contain; /* 이미지가 화면을 꽉 채우도록 설정 */
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw; /* 뷰포트 너비와 동일하게 설정 */
+  height: 100vh; /* 뷰포트 높이와 동일하게 설정, 화면을 꽉 채움 */
+  display: flex;
+  flex-direction: column; /* 요소들을 세로로 정렬 */
+  justify-content: center;
+  align-items: center; /* 가로 방향 중앙 정렬 */
+}
+
+.photos {
+  display: flex; /* 사진들을 가로로 정렬 */
+  justify-content: center; /* 가로 방향 중앙 정렬 */
+  align-items: center; /* 세로 방향 중앙 정렬 */
+}
+
+.photos img {
+  width: 150px; /* 사진 크기 조정 */
+  height: auto; /* 사진 높이 자동 조절 */
+  margin: 0 10px; /* 사진 간 여백 */
+}
+
+.photos-caption {
+  color: #000; /* 글씨 색상 */
+  font-size: 16px; /* 글씨 크기 */
+  margin-top: 20px; /* 사진과 캡션 사이의 여백 */
+}
+
+
