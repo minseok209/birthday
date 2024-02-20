@@ -10,7 +10,7 @@ body, html {
 
 header {
   background-color: #ffcccc;
-  padding: 20px;
+  padding: 22px;
   text-align: center;
 }
 
@@ -30,7 +30,7 @@ nav ul li a {
 }
 
 main {
-  padding: 20px;
+  padding: 15px;
   text-align: center;
 }
 
@@ -92,15 +92,31 @@ main {
 }
 
 .photos img {
-  width: 150px; /* 사진 크기 조정 */
+  width: 200px; /* 사진 크기 조정 */
   height: auto; /* 사진 높이 자동 조절 */
   margin: 0 10px; /* 사진 간 여백 */
 }
 
 .photos-caption {
   color: #000; /* 글씨 색상 */
-  font-size: 16px; /* 글씨 크기 */
+  font-size: 20px; /* 글씨 크기 */
   margin-top: 20px; /* 사진과 캡션 사이의 여백 */
 }
+.special-message {
+  font-weight: bold; /* 글자를 굵게 */
+  font-size: 20px; /* 글씨 크기 */
+  color: #f036a9; /* 파스텔 색상 (예: 파스텔 파란색) */
+  /* 원하는 파스텔 색상으로 색상 코드 변경 가능 */
+}
+.title {
+  font-weight: bold; /* 글자를 굵게 */
+  font-size: 20px; /* 글씨 크기 */
+  color: #3639f0; /* 파스텔 색상 (예: 파스텔 파란색) */
+  /* 원하는 파스텔 색상으로 색상 코드 변경 가능 */
+}
 
+.fade-out-text {
+  transition: opacity 2s ease-out;
+  opacity: 1;
+}
 
