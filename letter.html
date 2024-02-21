@@ -21,25 +21,42 @@
     
     <!-- 동영상 첨부 -->
     <div class="video-container">
-        <video controls>
+      <video id="birthdayVideo" controls>
             <source src="path/to/your-video.mp4" type="video/mp4">
             <!-- 다른 비디오 포맷을 지원하려면 여기에 <source> 태그를 추가하세요 -->
             죄송하지만, 현재 브라우저는 비디오 태그를 지원하지 않습니다.
         </video>
+        <button id="playButton">동영상 재생</button>
     </div>
   </div>
-  <!--
   <script>
-    (function() {
+    document.addEventListener('DOMContentLoaded', function() {
         var currentDate = new Date();
-        var launchDate = new Date('2024-02-22T00:00:00');
+        var launchDate = new Date('2024-02-20T00:00:00');
+        var videoAccessDate = new Date('2024-02-22T13:00:00'); // 오후 1시
 
         if (currentDate < launchDate) {
             alert('이 페이지는 2024년 2월 22일 0시 이후에 열람할 수 있습니다.');
             window.location.href = 'index.html';
         }
-    })();
-  </script>
-  -->
+
+        var video = document.getElementById('birthdayVideo');
+        var playButton = document.getElementById('playButton');
+
+        playButton.addEventListener('click', function() {
+            var now = new Date();
+            if (now < videoAccessDate) {
+                alert('동영상은 2024년 2월 22일 오후 1시 이후에 재생할 수 있습니다.');
+            } else {
+                if (video.paused) {
+                    video.play();
+                } else {
+                    video.pause();
+                }
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
