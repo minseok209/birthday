@@ -1,0 +1,26 @@
+body, html {
+  background-color: #fdf5e6; /* 편지지와 같은 연한 베이지색 */
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+  font-weight: 700;
+}
+
+.letter-container {
+  max-width: 600px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.letter-container h1, .letter-container p {
+  text-align: left;
+  font-weight: 700;
+}
+
+.letter-container p {
+  font-size: 16px;
+  line-height: 1.5;
+}
